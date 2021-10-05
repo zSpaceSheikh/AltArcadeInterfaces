@@ -1,6 +1,18 @@
-# Trash Plinko?
+# Plinko Burger!
 
-***Trash Plinko is still in development but may involve digital plinko with trash, controlled by a physical alternative controller... somehow...***
+***Plinko Burger is still in development but may involve digital burger making! With alternative controller spatulas and order headsets***
+
+## A Plinko Burger Prototype!
+
+*Welcome to Plinko Burger, home of the plinko burger, may I take your order?*
+
+The newest plinko prototype has some super snazzy updates! Now with voice controls for ordering each ingredient to fall from their respective bins at the top, players can call out what they need and attempt to build thier burger. The bins at the top also light up and ding when the machine recognizes the players request. Pressing the spacebar sends the order off through the bin at the bottom and so you can start on the next one. 
+
+Our next task will be to have specific orders, scoring, and a physical spatula controller for the paddle at the bottom. Other fun options include a headset with a mic that you can yell the orders you are hearing, out to the plinko machine. 
+
+
+
+<img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/PlinkoBurger-Prototype.gif" width="60%">
 
 
 ## Burger Plinko (*nomnomnom*)
