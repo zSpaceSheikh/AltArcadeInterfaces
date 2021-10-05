@@ -4,11 +4,11 @@ Documentation and code for projects developed in the Fall 2021 semester of ATLS 
 
 
 
-# Trash Plinko?
+# Plinko Burger!
 
-***Trash Plinko is still in development but may involve digital plinko with trash, controlled by a physical alternative controller... somehow...***
+***Plinko Burger is still in development but may involve digital burger making! With alternative controller spatulas and order headsets***
 
-<img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/TrashPlinko-TrashPrototype.gif" width="60%">
+<img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/PlinkoBurger-Prototype.gif" width="60%">
 
 [Documentation](https://github.com/zSpaceSheikh/AltArcadeInterfaces/tree/main/Alt-Redemption)
 
