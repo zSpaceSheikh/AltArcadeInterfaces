@@ -13,9 +13,6 @@ public class GameManager : MonoBehaviour
     public float lightUpTime;
     public float spawnTimer;
 
-    public GameObject order1Floor;
-    public GameObject order2Floor;
-    
     // ingredient hoppers
     [Header("Ingredient Hoppers")] 
     public GameObject hopBun;
@@ -58,15 +55,15 @@ public class GameManager : MonoBehaviour
     
     private KeywordRecognizer keywordRecognizer;
     private Dictionary<string, Action> actions = new Dictionary<string, Action>();
-    
-    
+
+
     void Start()
     {
         if (autoSpawn)
         {
             StartCoroutine(spawnIngredients());
         }
-        
+
         // calls to main ingredients for voice recognition
         actions.Add("burger", Burger);
         actions.Add("buns", Buns);
@@ -74,21 +71,21 @@ public class GameManager : MonoBehaviour
         actions.Add("lettuce", Lettuce);
         actions.Add("tomato", Tomato);
         actions.Add("cheese", Cheese);
-        
+
         // calls to mystery ingredients for voice recognition
         actions.Add("apple", Apple);
         actions.Add("banana", Banana);
         actions.Add("blueberry", Blueberry);
         actions.Add("blueberries", Blueberry);
-        
+
         // add more things to spawn here ------------------------
-        
+
         // voice recognition stuff
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
         keywordRecognizer.Start();
-        
-        
+
+
         // hopper emission material stuff
         bunMR = hopBun.GetComponent<MeshRenderer>();
         baconMR = hopBacon.GetComponent<MeshRenderer>();
@@ -97,31 +94,6 @@ public class GameManager : MonoBehaviour
         lettuceMR = hopLettuce.GetComponent<MeshRenderer>();
         cheeseMR = hopCheese.GetComponent<MeshRenderer>();
         mysteryMR = hopMystery.GetComponent<MeshRenderer>();
-        
-}
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            order1Floor.SetActive(false);
-            Invoke("RemoveFloor1", 2f);
-        }
-        if (Input.GetKeyDown(KeyCode.RightShift))
-        {
-            order2Floor.SetActive(false);
-            Invoke("RemoveFloor2", 2f);
-        }
-    }
-    
-    private void RemoveFloor1()
-    {
-        order1Floor.SetActive(true);
-    }
-    
-    private void RemoveFloor2()
-    {
-        order2Floor.SetActive(true);
     }
 
 

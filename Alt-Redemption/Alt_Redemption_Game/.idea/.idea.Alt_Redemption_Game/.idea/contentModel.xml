@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\zshei\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\zshei\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Alt_Redemption_Game.1861746189.00" t="ExcludeRecursive" />
-    <e p="C:\Users\zshei\Documents\Alt Arcade Interfaces\Alt Redemption\Alt_Redemption_Game" t="IncludeRecursive">
+    <e p="C:\Users\zshei\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Alt_Redemption_Game.792856259.00" t="ExcludeRecursive" />
+    <e p="C:\Users\zshei\Documents\Alt Arcade Interfaces\AltArcadeInterfaces\Alt-Redemption\Alt_Redemption_Game" t="IncludeRecursive">
       <e p="Alt_Redemption_Game.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -11,6 +11,7 @@
           <e p="AudioManager.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="Paddle.cs" t="Include" />
+          <e p="ServeBins.cs" t="Include" />
           <e p="StuffDespawner.cs" t="Include" />
           <e p="StuffSpawner.cs" t="Include" />
         </e>

@@ -7,7 +7,7 @@ public class StuffDespawner : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         
-        Debug.Log(collision.gameObject.tag);
+        Debug.Log(collision.gameObject);
         Destroy(collision.gameObject);
         
         
