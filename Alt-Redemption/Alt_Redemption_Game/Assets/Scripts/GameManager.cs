@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour
     public float lightUpTime;
     public float spawnTimer;
 
-    public GameObject orderFloor;
+    public GameObject order1Floor;
+    public GameObject order2Floor;
     
     // ingredient hoppers
     [Header("Ingredient Hoppers")] 
@@ -23,6 +24,7 @@ public class GameManager : MonoBehaviour
     public GameObject hopLettuce;
     public GameObject hopCheese;
     public GameObject hopBacon;
+    public GameObject hopMystery;
     
     // ingredient prefabs
     [Header("Ingredient Prefabs")] 
@@ -34,6 +36,13 @@ public class GameManager : MonoBehaviour
     public GameObject cheese;
     public GameObject bunBot;
     
+    [Header("Mystery Prefabs")] 
+    public GameObject apple;
+    public GameObject banana;
+    public GameObject blueberry;
+    
+    // add more game object calls to model prefabs here -----------------------------------------
+    
     // mesh renderer variables
     private MeshRenderer bunMR;
     private MeshRenderer baconMR;
@@ -41,6 +50,7 @@ public class GameManager : MonoBehaviour
     private MeshRenderer burgerMR;
     private MeshRenderer tomatoMR;
     private MeshRenderer cheeseMR;
+    private MeshRenderer mysteryMR;
 
     private bool gameIsPlaying = true;
 
@@ -57,6 +67,7 @@ public class GameManager : MonoBehaviour
             StartCoroutine(spawnIngredients());
         }
         
+        // calls to main ingredients for voice recognition
         actions.Add("burger", Burger);
         actions.Add("buns", Buns);
         actions.Add("bacon", Bacon);
@@ -64,34 +75,53 @@ public class GameManager : MonoBehaviour
         actions.Add("tomato", Tomato);
         actions.Add("cheese", Cheese);
         
+        // calls to mystery ingredients for voice recognition
+        actions.Add("apple", Apple);
+        actions.Add("banana", Banana);
+        actions.Add("blueberry", Blueberry);
+        actions.Add("blueberries", Blueberry);
+        
+        // add more things to spawn here ------------------------
+        
         // voice recognition stuff
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
         keywordRecognizer.Start();
         
         
-        // emission material stuff
+        // hopper emission material stuff
         bunMR = hopBun.GetComponent<MeshRenderer>();
         baconMR = hopBacon.GetComponent<MeshRenderer>();
         tomatoMR = hopTomato.GetComponent<MeshRenderer>();
         burgerMR = hopBurger.GetComponent<MeshRenderer>();
         lettuceMR = hopLettuce.GetComponent<MeshRenderer>();
         cheeseMR = hopCheese.GetComponent<MeshRenderer>();
+        mysteryMR = hopMystery.GetComponent<MeshRenderer>();
         
 }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            orderFloor.SetActive(false);
-            Invoke("RemoveFloor", 2f);
+            order1Floor.SetActive(false);
+            Invoke("RemoveFloor1", 2f);
+        }
+        if (Input.GetKeyDown(KeyCode.RightShift))
+        {
+            order2Floor.SetActive(false);
+            Invoke("RemoveFloor2", 2f);
         }
     }
     
-    private void RemoveFloor()
+    private void RemoveFloor1()
     {
-        orderFloor.SetActive(true);
+        order1Floor.SetActive(true);
+    }
+    
+    private void RemoveFloor2()
+    {
+        order2Floor.SetActive(true);
     }
 
 
@@ -100,6 +130,21 @@ public class GameManager : MonoBehaviour
      
         Debug.Log(Speech.text);
         actions[Speech.text].Invoke();
+    }
+    
+    private void spawnIngredient(GameObject ingredient, GameObject hopper)
+    {
+        // give the spawned item a random rotation
+        int aI = Random.Range(1, 89);
+        
+        // add a clone of the item to the scene at the correct position
+        GameObject c = Instantiate(ingredient) as GameObject;
+        Vector3 hopperLoc = hopper.transform.position;
+        c.transform.position = new Vector3(hopperLoc.x, hopperLoc.y, -1.25f);
+        c.transform.Rotate(0, 0, aI);
+        
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
     }
     
     
@@ -163,25 +208,44 @@ public class GameManager : MonoBehaviour
         tomatoMR.material.EnableKeyword("_EMISSION");
         Invoke("TomatoLightUp", lightUpTime);
     }
-
     
-    
-    private void spawnIngredient(GameObject ingredient, GameObject hopper)
+    // mystery food spawn functions
+    private void Apple()
     {
-        // give the spawned item a random rotation
-        int aI = Random.Range(1, 89);
+        Debug.Log("spawn apple!");
+        spawnIngredient(apple, hopMystery);
         
-        // add a clone of the item to the scene at the correct position
-        GameObject c = Instantiate(ingredient) as GameObject;
-        Vector3 hopperLoc = hopper.transform.position;
-        c.transform.position = new Vector3(hopperLoc.x, hopperLoc.y, -1.25f);
-        c.transform.Rotate(0, 0, aI);
-        
-        // activate the spawn sound
-        AudioManager.S.SpawnDing();
+        // light up the mystery bin
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
     }
     
+    private void Banana()
+    {
+        Debug.Log("spawn banana!");
+        spawnIngredient(banana, hopMystery);
+        
+        // light up the mystery bin
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+    }
     
+    private void Blueberry()
+    {
+        Debug.Log("spawn blueberries!");
+        for (int i = 0; i < 15; i++) {
+            spawnIngredient(blueberry, hopMystery);
+        }
+
+        // light up the mystery bin
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+    }
+
+    // add more stuff spawning functions here -----------------------------------------
+    
+    
+    // for auto spawning ingredients
     IEnumerator spawnIngredients()
     {
         while (gameIsPlaying)
@@ -230,6 +294,7 @@ public class GameManager : MonoBehaviour
         
     }
     
+    // hopper disable glow functions
     private void BunLightUp()
     {
         bunMR.material.DisableKeyword("_EMISSION");
@@ -258,5 +323,10 @@ public class GameManager : MonoBehaviour
     private void CheeseLightUp()
     {
         cheeseMR.material.DisableKeyword("_EMISSION");
+    }
+    
+    private void MysteryLightUp()
+    {
+        mysteryMR.material.DisableKeyword("_EMISSION");
     }
 }
