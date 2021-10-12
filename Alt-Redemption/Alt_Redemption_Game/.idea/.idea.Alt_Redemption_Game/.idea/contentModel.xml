@@ -11,6 +11,7 @@
           <e p="AudioManager.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="Paddle.cs" t="Include" />
+          <e p="Score.cs" t="Include" />
           <e p="ServeBins.cs" t="Include" />
           <e p="StuffDespawner.cs" t="Include" />
           <e p="StuffSpawner.cs" t="Include" />

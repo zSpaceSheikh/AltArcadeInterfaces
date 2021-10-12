@@ -16,8 +16,8 @@ public class ServeBins : MonoBehaviour
     private bool serve2 = true;
 
     public float binSpeed;
-    private Vector3 targetPos1 = new Vector3(3.88f, -4.82f, -0.97f);
-    private Vector3 targetPos2 = new Vector3(-3.88f, -4.82f, -0.97f);
+    private Vector3 targetPos1 = new Vector3(6f, -4.82f, -0.97f);
+    private Vector3 targetPos2 = new Vector3(-6f, -4.82f, -0.97f);
     
     
 
@@ -55,7 +55,7 @@ public class ServeBins : MonoBehaviour
         order1Floor.SetActive(true);
         
         
-        while (b.transform.position.x > -4f)
+        while (b.transform.position.x > -6f)
         {
             Vector3 pos = Vector3.MoveTowards(b.transform.position, targetPos2, binSpeed * Time.deltaTime);
             b.GetComponent<Rigidbody>().MovePosition(pos);
@@ -63,11 +63,9 @@ public class ServeBins : MonoBehaviour
             yield return null;
         }
         
-
-        if (!serve1)
-        {
-            serve1 = true;
-        }
+        Destroy(b);
+        
+        serve1 = true;
     }
     
     IEnumerator SendOrder2(GameObject b)
@@ -79,7 +77,7 @@ public class ServeBins : MonoBehaviour
         order2Floor.SetActive(true);
         
         
-        while (b.transform.position.x < 4f)
+        while (b.transform.position.x < 6f)
         {
             Vector3 pos = Vector3.MoveTowards(b.transform.position, targetPos1, binSpeed * Time.deltaTime);
             b.GetComponent<Rigidbody>().MovePosition(pos);
@@ -87,11 +85,9 @@ public class ServeBins : MonoBehaviour
             yield return null;
         }
         
+        Destroy(b);
 
-        if (!serve2)
-        {
-            serve2 = true;
-        }
+        serve2 = true;
     }
     
 }
