@@ -37,6 +37,8 @@ public class GameManager : MonoBehaviour
     public GameObject apple;
     public GameObject banana;
     public GameObject blueberry;
+    public GameObject pineapple;
+    public GameObject chili;
     
     // add more game object calls to model prefabs here -----------------------------------------
     
@@ -77,6 +79,10 @@ public class GameManager : MonoBehaviour
         actions.Add("banana", Banana);
         actions.Add("blueberry", Blueberry);
         actions.Add("blueberries", Blueberry);
+        actions.Add("pineapple", Pineapple);
+        actions.Add("chili", Chili);
+        actions.Add("chili pepper", Chili);
+        actions.Add("pepper", Chili);
 
         // add more things to spawn here ------------------------
 
@@ -99,8 +105,7 @@ public class GameManager : MonoBehaviour
 
     private void RecognizedSpeech(PhraseRecognizedEventArgs Speech)
     {
-     
-        Debug.Log(Speech.text);
+        //Debug.Log(Speech.text);
         actions[Speech.text].Invoke();
     }
     
@@ -122,7 +127,7 @@ public class GameManager : MonoBehaviour
     
     private void Burger()
     {
-        Debug.Log("spawn burger!");
+        //Debug.Log("spawn burger!");
         spawnIngredient(burg, hopBurger);
         
         // light up the burger bin
@@ -132,7 +137,7 @@ public class GameManager : MonoBehaviour
     
     private void Bacon()
     {
-        Debug.Log("spawn bacon!");
+        //Debug.Log("spawn bacon!");
         spawnIngredient(bacon, hopBacon);
         
         // light up the bacon bin
@@ -142,7 +147,7 @@ public class GameManager : MonoBehaviour
     
     private void Lettuce()
     {
-        Debug.Log("spawn lettuce!");
+        //Debug.Log("spawn lettuce!");
         spawnIngredient(lettuce, hopLettuce);
         
         // light up the lettuce bin
@@ -152,7 +157,7 @@ public class GameManager : MonoBehaviour
     
     private void Buns()
     {
-        Debug.Log("spawn buns!");
+        //Debug.Log("spawn buns!");
         spawnIngredient(bunTop, hopBun);
         spawnIngredient(bunBot, hopBun);
         
@@ -163,7 +168,7 @@ public class GameManager : MonoBehaviour
     
     private void Cheese()
     {
-        Debug.Log("spawn cheese!");
+        //Debug.Log("spawn cheese!");
         spawnIngredient(cheese, hopCheese);
         
         // light up the cheese bin
@@ -173,7 +178,7 @@ public class GameManager : MonoBehaviour
     
     private void Tomato()
     {
-        Debug.Log("spawn tomato!");
+        //Debug.Log("spawn tomato!");
         spawnIngredient(tomato, hopTomato);
         
         // light up the tomato bin
@@ -184,7 +189,7 @@ public class GameManager : MonoBehaviour
     // mystery food spawn functions
     private void Apple()
     {
-        Debug.Log("spawn apple!");
+        //Debug.Log("spawn apple!");
         spawnIngredient(apple, hopMystery);
         
         // light up the mystery bin
@@ -194,7 +199,7 @@ public class GameManager : MonoBehaviour
     
     private void Banana()
     {
-        Debug.Log("spawn banana!");
+        //Debug.Log("spawn banana!");
         spawnIngredient(banana, hopMystery);
         
         // light up the mystery bin
@@ -204,7 +209,7 @@ public class GameManager : MonoBehaviour
     
     private void Blueberry()
     {
-        Debug.Log("spawn blueberries!");
+        //Debug.Log("spawn blueberries!");
         for (int i = 0; i < 15; i++) {
             spawnIngredient(blueberry, hopMystery);
         }
@@ -213,6 +218,27 @@ public class GameManager : MonoBehaviour
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
     }
+    
+    private void Pineapple()
+    {
+        //Debug.Log("spawn a pineapple!");
+        spawnIngredient(pineapple, hopMystery);
+        
+        // light up the mystery bin
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+    }
+    
+    private void Chili()
+    {
+        //Debug.Log("spawn a pineapple!");
+        spawnIngredient(chili, hopMystery);
+        
+        // light up the mystery bin
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+    }
+    
 
     // add more stuff spawning functions here -----------------------------------------
     
