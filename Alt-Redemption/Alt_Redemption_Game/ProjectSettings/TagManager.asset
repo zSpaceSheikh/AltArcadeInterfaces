@@ -8,6 +8,13 @@ TagManager:
   - Compost
   - Trash
   - Ingredient
+  - Bins
+  - Bun
+  - Burger
+  - Bacon
+  - Cheese
+  - Tomato
+  - Lettuce
   layers:
   - Default
   - TransparentFX

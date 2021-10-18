@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2324140559961937755}
   m_Layer: 0
   m_Name: Bread Sesame Top
-  m_TagString: Ingredient
+  m_TagString: Bun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -32,14 +32,34 @@ public class GameManager : MonoBehaviour
     public GameObject lettuce;
     public GameObject cheese;
     public GameObject bunBot;
-    
+
     [Header("Mystery Prefabs")] 
+    public GameObject fries;
+    public GameObject drink;
     public GameObject apple;
     public GameObject banana;
     public GameObject blueberry;
     public GameObject pineapple;
     public GameObject chili;
-    
+    public GameObject carrot;
+    public GameObject avocado;
+    public GameObject beet;
+    public GameObject watermelon;
+    public GameObject squash;
+    public GameObject papaya;
+    public GameObject pumpkin;
+    public GameObject strawberry;
+    public GameObject radish;
+    public GameObject leek;
+    public GameObject pear;
+    public GameObject pea;
+    public GameObject mushroom;
+    public GameObject coconut;
+    public GameObject broccoli;
+    public GameObject asparagus;
+    public GameObject eggplant;
+    public GameObject onion;
+
     // add more game object calls to model prefabs here -----------------------------------------
     
     // mesh renderer variables
@@ -75,6 +95,16 @@ public class GameManager : MonoBehaviour
         actions.Add("cheese", Cheese);
 
         // calls to mystery ingredients for voice recognition
+        actions.Add("fry", Fries);
+        actions.Add("fries", Fries);
+        actions.Add("french fry", Fries);
+        actions.Add("french fries", Fries);
+        
+        actions.Add("drink", Drink);
+        actions.Add("beverage", Drink);
+        actions.Add("coke", Drink);
+        actions.Add("sprite", Drink);
+        
         actions.Add("apple", Apple);
         actions.Add("banana", Banana);
         actions.Add("blueberry", Blueberry);
@@ -83,6 +113,27 @@ public class GameManager : MonoBehaviour
         actions.Add("chili", Chili);
         actions.Add("chili pepper", Chili);
         actions.Add("pepper", Chili);
+        actions.Add("carrot", Carrot);
+        actions.Add("avocado", Avocado);
+        actions.Add("beet", Beet);
+        actions.Add("watermelon", Watermelon);
+        actions.Add("squash", Squash);
+        actions.Add("papaya", Papaya);
+        actions.Add("pumpkin", Pumpkin);
+        actions.Add("strawberry", Strawberry);
+        actions.Add("radish", Radish);
+        actions.Add("leek", Leek);
+        actions.Add("pear", Pear);
+        actions.Add("pea", Pea);
+        actions.Add("peas", Pea);
+        actions.Add("mushroom", Mushroom);
+        actions.Add("coconut", Coconut);
+        actions.Add("broccoli", Broccoli);
+        actions.Add("asparagus", Asparagus);
+        actions.Add("eggplant", Eggplant);
+        actions.Add("aubergine", Eggplant);
+        actions.Add("Onion", Onion);
+        
 
         // add more things to spawn here ------------------------
 
@@ -186,59 +237,188 @@ public class GameManager : MonoBehaviour
         Invoke("TomatoLightUp", lightUpTime);
     }
     
-    // mystery food spawn functions
+    // mystery food spawn functions ------------------------------------------
+    
+    private void Fries()
+    {
+        for (int i = 0; i < 7; i++) {
+            spawnIngredient(fries, hopMystery);
+        }
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+    }
+    
+    private void Drink()
+    {
+        spawnIngredient(drink, hopMystery);
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+    }
+    
     private void Apple()
     {
-        //Debug.Log("spawn apple!");
         spawnIngredient(apple, hopMystery);
-        
-        // light up the mystery bin
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
     }
     
     private void Banana()
     {
-        //Debug.Log("spawn banana!");
         spawnIngredient(banana, hopMystery);
-        
-        // light up the mystery bin
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
     }
     
     private void Blueberry()
     {
-        //Debug.Log("spawn blueberries!");
         for (int i = 0; i < 15; i++) {
             spawnIngredient(blueberry, hopMystery);
         }
-
-        // light up the mystery bin
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
     }
     
     private void Pineapple()
     {
-        //Debug.Log("spawn a pineapple!");
         spawnIngredient(pineapple, hopMystery);
-        
-        // light up the mystery bin
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
     }
     
     private void Chili()
     {
-        //Debug.Log("spawn a pineapple!");
         spawnIngredient(chili, hopMystery);
-        
-        // light up the mystery bin
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
     }
     
+    private void Carrot()
+    {
+        spawnIngredient(carrot, hopMystery);
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+    }
+    
+    private void Avocado()
+    {
+        spawnIngredient(avocado, hopMystery);
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+    }
+    
+    private void Beet()
+    {
+        spawnIngredient(beet, hopMystery);
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+    }
+    
+    private void Watermelon()
+    {
+        spawnIngredient(watermelon, hopMystery);
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+    }
+    
+    private void Squash()
+    {
+        spawnIngredient(squash, hopMystery);
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+    }
+    
+    private void Papaya()
+    {
+        spawnIngredient(papaya, hopMystery);
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+    }
+    
+    private void Pumpkin()
+    {
+        spawnIngredient(pumpkin, hopMystery);
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+    }
+    
+    private void Strawberry()
+    {
+        spawnIngredient(strawberry, hopMystery);
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+    }
+    
+    private void Radish()
+    {
+        spawnIngredient(radish, hopMystery);
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+    }
+    
+    private void Leek()
+    {
+        spawnIngredient(leek, hopMystery);
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+    }
+    
+    private void Pear()
+    {
+        spawnIngredient(pear, hopMystery);
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+    }
+    
+    private void Pea()
+    {
+        for (int i = 0; i < 15; i++) {
+            spawnIngredient(pea, hopMystery);
+        }
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+    }
+    
+    private void Mushroom()
+    {
+        spawnIngredient(mushroom, hopMystery);
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+    }
+    
+    private void Coconut()
+    {
+        spawnIngredient(coconut, hopMystery);
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+    }
+    
+    private void Broccoli()
+    {
+        spawnIngredient(broccoli, hopMystery);
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+    }
+    
+    private void Asparagus()
+    {
+        spawnIngredient(asparagus, hopMystery);
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+    }
+    
+    private void Eggplant()
+    {
+        spawnIngredient(eggplant, hopMystery);
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+    }
+    
+    private void Onion()
+    {
+        spawnIngredient(onion, hopMystery);
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+    }
 
     // add more stuff spawning functions here -----------------------------------------
     

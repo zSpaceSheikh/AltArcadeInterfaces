@@ -48,7 +48,7 @@ public class ServeBins : MonoBehaviour
 
     IEnumerator SendOrder1(GameObject b)
     {
-        Debug.Log("Entered SendOrder1");
+        //Debug.Log("Entered SendOrder1");
         WaitForSeconds delay = new WaitForSeconds(moveDelay);
 
         yield return delay;
@@ -59,19 +59,19 @@ public class ServeBins : MonoBehaviour
         
         while (sent1 == false)
         {
-            Debug.Log("Moving Order 1 Bin");
+            //Debug.Log("Moving Order 1 Bin");
             Vector3 pos = Vector3.MoveTowards(b.transform.position, targetPos2, binSpeed * Time.deltaTime);
             b.GetComponent<Rigidbody>().MovePosition(pos);
             
             if (pos.x == -6f)
             {
-                Debug.Log("bin 1 arrived!");
+                //Debug.Log("bin 1 arrived!");
                 sent1 = true;
             }
             
             yield return null;
         }
-        Debug.Log("Destroy Order 1 Bin");
+        //Debug.Log("Destroy Order 1 Bin");
         
         Destroy(b);
         
@@ -80,7 +80,7 @@ public class ServeBins : MonoBehaviour
     
     IEnumerator SendOrder2(GameObject b)
     {
-        Debug.Log("Entered SendOrder2");
+        //Debug.Log("Entered SendOrder2");
         WaitForSeconds delay = new WaitForSeconds(moveDelay);
 
         yield return delay;
@@ -96,13 +96,13 @@ public class ServeBins : MonoBehaviour
 
             if (pos.x == 6f)
             {
-                Debug.Log("bin 2 arrived!");
+                //Debug.Log("bin 2 arrived!");
                 sent2 = true;
             }
 
             yield return null;
         }
-        Debug.Log("Destroy Order 2 Bin");
+        //Debug.Log("Destroy Order 2 Bin");
         
         Destroy(b);
 

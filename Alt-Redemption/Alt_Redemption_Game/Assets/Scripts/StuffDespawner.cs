@@ -7,10 +7,15 @@ public class StuffDespawner : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         
-        if (collision.gameObject.CompareTag("Ingredient"))
+        if (collision.gameObject.CompareTag("Bins"))
+        { 
+            //Debug.Log(collision.gameObject.tag);
+        }
+        
+        else
         {
-            Debug.Log(collision.gameObject.tag);
-           Destroy(collision.gameObject);
+            //Debug.Log(collision.gameObject.tag);
+            Destroy(collision.gameObject);
         }
         
     }

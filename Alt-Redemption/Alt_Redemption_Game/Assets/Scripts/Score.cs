@@ -10,7 +10,12 @@ public class Score : MonoBehaviour
     
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.CompareTag("Ingredient"))
+        if (collision.gameObject.CompareTag("Bins"))
+        {
+            //Debug.Log(collision.gameObject.tag);
+            //Destroy(collision.gameObject);
+        }
+        else
         {
             Debug.Log(collision.gameObject.tag);
             Destroy(collision.gameObject);

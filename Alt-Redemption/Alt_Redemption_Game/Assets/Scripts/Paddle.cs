@@ -12,13 +12,38 @@ public class Paddle : MonoBehaviour
     public float speed;
     public Rigidbody rigiB;
 
+    public ParticleSystem ketchup;
+    public ParticleSystem mustard;
+
     private float movement;
 
 
     void Update()
     {
         movement = Input.GetAxisRaw("Horizontal");
-        //Debug.Log(movement*speed);
         rigiB.velocity = new Vector3(movement * speed, 0, 0);
+
+        //Debug.Log(movement);
+        
+        // bumper is moving to the right, shoot ketchup
+        if (movement > 0)
+        {
+            ketchup.Play();
+            mustard.Stop();
+        }
+    
+        // bumper is moving to the left, shoot mustard
+        if (movement < 0)
+        {
+            mustard.Play();
+            ketchup.Stop();
+        }
+        
+        // bumper is not moving, stop all particle effects
+        else
+        {
+            ketchup.Stop();
+            mustard.Stop();
+        }
     }
 }
