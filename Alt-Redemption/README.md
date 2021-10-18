@@ -1,6 +1,17 @@
 # Plinko Burger!
 
-***Plinko Burger is still in development but may involve digital burger making! With alternative controller spatulas and order headsets***
+***Plinko Burger is still in development but may involve digital burger making! With alternative controller squeezy bottles and an order headset***
+
+## Plinko Burger, Order Up
+
+*Bins, buns, battlestar galactica!*
+
+Lots of functional updates *distant cheering* including moving order bins, propulsion ketchup/mustard controls, and a mystery box full of random ingredients!? The prototype will also now be controlled with a pair of force sensitive resistor squeezy bottle which will propel the bumper in either direction. The actual motion of the bumper could definitely be more slippery, which should happen in the next update. 
+
+The mystery box is full of random food items which will fall at on command, including: pineapple, french fries, and even pumpkins? And once the ingredients have been collected in the correct bin, players can ship off the order and watch the food fall into a container below and send off to be scored. 
+
+<img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/PlinkoBurger-Bins.gif" width="60%">
+
 
 ## A Plinko Burger Prototype!
 
@@ -9,7 +20,6 @@
 The newest plinko prototype has some super snazzy updates! Now with voice controls for ordering each ingredient to fall from their respective bins at the top, players can call out what they need and attempt to build thier burger. The bins at the top also light up and ding when the machine recognizes the players request. Pressing the spacebar sends the order off through the bin at the bottom and so you can start on the next one. 
 
 Our next task will be to have specific orders, scoring, and a physical spatula controller for the paddle at the bottom. Other fun options include a headset with a mic that you can yell the orders you are hearing, out to the plinko machine. 
-
 
 
 <img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/PlinkoBurger-Prototype.gif" width="60%">
