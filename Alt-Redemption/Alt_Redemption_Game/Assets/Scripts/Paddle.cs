@@ -18,11 +18,13 @@ public class Paddle : MonoBehaviour
     private float movement;
 
 
-    void Update()
+    void FixedUpdate()
     {
         movement = Input.GetAxisRaw("Horizontal");
-        rigiB.velocity = new Vector3(movement * speed, 0, 0);
-
+        //rigiB.velocity = new Vector3(movement * speed, 0, 0);
+        Vector3 forceVec = new Vector3(movement*speed, 0f, 0f);
+        rigiB.AddForce(forceVec, ForceMode.Acceleration);
+        
         //Debug.Log(movement);
         
         // bumper is moving to the right, shoot ketchup

@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using UnityEngine.Windows.Speech;
+using System.Linq;
 
 public class ServeBins : MonoBehaviour
 {
@@ -19,9 +22,20 @@ public class ServeBins : MonoBehaviour
     private Vector3 targetPos1 = new Vector3(6f, -4.82f, -0.97f);
     private Vector3 targetPos2 = new Vector3(-6f, -4.82f, -0.97f);
     
-    
+    private KeywordRecognizer keywordRecognizer;
+    private Dictionary<string, Action> actions = new Dictionary<string, Action>();
 
-    // Update is called once per frame
+    private void Start()
+    {
+        actions.Add("order up", Order1Check);
+        
+        // voice recognition stuff
+        keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
+        keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
+        keywordRecognizer.Start();
+    }
+    
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && serve1)
@@ -43,6 +57,20 @@ public class ServeBins : MonoBehaviour
             
             serve2 = false;
             StartCoroutine(SendOrder2(b2));
+        }
+    }
+
+    private void Order1Check()
+    {
+        if (serve1)
+        {
+            GameObject b1 = Instantiate(bin1) as GameObject;
+            b1.transform.position = new Vector3(-1.95f, -4.82f, -0.97f);
+            
+            order1Floor.SetActive(false);
+            
+            serve1 = false;
+            StartCoroutine(SendOrder1(b1));
         }
     }
 
@@ -107,6 +135,12 @@ public class ServeBins : MonoBehaviour
         Destroy(b);
 
         serve2 = true;
+    }
+    
+    private void RecognizedSpeech(PhraseRecognizedEventArgs Speech)
+    {
+        //Debug.Log(Speech.text);
+        actions[Speech.text].Invoke();
     }
     
 }
