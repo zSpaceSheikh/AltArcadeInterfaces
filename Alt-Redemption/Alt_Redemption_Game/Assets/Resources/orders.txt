@@ -1,3 +1,6 @@
-burger bun cheese*
-burger burger bun bacon*
-lettuce lettuce burger tomato*
+Plinko Burger:=Burger Patty+Bun
+Plinko Burger wt Cheese:=Burger Patty+Bun+Cheese
+Meat Lover:=Burger Patty+Burger Patty+Bun+Bacon
+Veggie Head:=Lettuce+Lettuce+Burger Patty+Tomato
+Holy Guacamole:=Burger Patty+Bun+Lettuce+Onion+Avocado
+The Spicy Boi:=Burger Patty+Buns+Cheese+Lettuce+Chilli Pepper

@@ -88,7 +88,11 @@ public class GameManager : MonoBehaviour
 
         // calls to main ingredients for voice recognition
         actions.Add("burger", Burger);
+        actions.Add("burger patty", Burger);
+        actions.Add("patty", Burger);
         actions.Add("buns", Buns);
+        actions.Add("bun", Buns);
+        actions.Add("burger bun", Buns);
         actions.Add("bacon", Bacon);
         actions.Add("lettuce", Lettuce);
         actions.Add("tomato", Tomato);

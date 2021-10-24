@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
 {
     
     public AudioSource spawnDing;
+    public AudioSource receiptPrint;
     
     public static AudioManager S;
 
@@ -30,5 +31,10 @@ public class AudioManager : MonoBehaviour
     public void SpawnDing()
     {
         spawnDing.Play();
+    }
+    
+    public void ReceiptPrint()
+    {
+        receiptPrint.Play();
     }
 }

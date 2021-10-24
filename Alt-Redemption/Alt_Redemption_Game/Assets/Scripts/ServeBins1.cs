@@ -90,6 +90,7 @@ public class ServeBins1 : MonoBehaviour
         Destroy(b);
         
         serve1 = true;
+        Orders.S.newOrder = true;
     }
     
     private void RecognizedSpeech(PhraseRecognizedEventArgs Speech)
