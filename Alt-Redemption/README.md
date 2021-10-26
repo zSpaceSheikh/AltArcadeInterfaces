@@ -2,6 +2,18 @@
 
 ***Plinko Burger is still in development but may involve digital burger making! With alternative controller squeezy bottles and an order headset***
 
+## Welcome to Plinko Burger!
+
+*Would you like your receipt?*
+
+This next iteration of Plinko Burger mainly involved some aesthetic upgrades and an opperational ordering system. We decided to go back to a single, central order bin after figuring out that two bins was two times, too many. Players can also see the missed ingredients fall to their deaths through transparent shoots out the back. The entire plinko machine got a *glow* update which gives a nice cool diner vibe to the whole experience.
+
+The unmentioned elephant in the room (now mentioned) is definitely the orderering and score system which now allows players to see the receipt of an order that they need to make on the left hand side of the plinko burger machine. After an order is sent out, another receipt will print while the audio of the customer ordering said meal can be heard over the headset. The game always starts with a simple Plinko Burger order to allow the player to ease into the experience. After that, who knows what someone might order!.
+
+I wish we had the time and resources to hook up and *actual* receipt printer to the game, which printed out *actual* receipts that the players had to compare to but... ¯\_(ツ)_/¯ I guess we'll see if that happens...
+
+<!-- insert updated gif here -->
+
 ## Plinko Burger, Order Up
 
 *Bins, buns, battlestar galactica!*
@@ -27,7 +39,7 @@ Our next task will be to have specific orders, scoring, and a physical spatula c
 
 ## Burger Plinko (*nomnomnom*)
 
-*Prototype update! Now with food and controls!*
+*Is that a burger???*
 
 Moving forward with this prototype, we wanted to try out some basic interactivity on the unity side and reskin the idea. 
 
