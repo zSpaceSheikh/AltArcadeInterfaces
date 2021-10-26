@@ -17,6 +17,7 @@
           <e p="Orders.cs" t="Include" />
           <e p="Paddle.cs" t="Include" />
           <e p="Score.cs" t="Include" />
+          <e p="ScoreText.cs" t="Include" />
           <e p="ServeBins.cs" t="Include" />
           <e p="ServeBins1.cs" t="Include" />
           <e p="StuffDespawner.cs" t="Include" />

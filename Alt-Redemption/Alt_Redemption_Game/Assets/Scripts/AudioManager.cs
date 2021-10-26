@@ -8,6 +8,9 @@ public class AudioManager : MonoBehaviour
     
     public AudioSource spawnDing;
     public AudioSource receiptPrint;
+    public AudioSource registerOrder;
+
+    public AudioSource[] orderVoices;
     
     public static AudioManager S;
 
@@ -34,7 +37,12 @@ public class AudioManager : MonoBehaviour
     }
     
     public void ReceiptPrint()
+         {
+             receiptPrint.Play();
+         }
+    
+    public void RegisterSound()
     {
-        receiptPrint.Play();
+        registerOrder.Play();
     }
 }

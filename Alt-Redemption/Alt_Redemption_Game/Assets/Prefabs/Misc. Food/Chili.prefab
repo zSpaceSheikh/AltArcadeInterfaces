@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5125581416214871805}
   m_Layer: 0
   m_Name: Chili
-  m_TagString: Ingredient
+  m_TagString: Chili Pepper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

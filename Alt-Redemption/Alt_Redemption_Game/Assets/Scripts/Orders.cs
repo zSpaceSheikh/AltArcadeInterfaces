@@ -15,6 +15,8 @@ public class Orders : MonoBehaviour
     private Text order_display;
     public string orderName;
 
+    public string[] ingredientsChecklist;
+
     public bool newOrder = true;
     private bool firstOrder = true;
 
@@ -93,12 +95,17 @@ public class Orders : MonoBehaviour
         orderName = fullOrder[0];
         OrderName.S.SetText();
         
+        // make an array of the ingredients for checking the score later
+        string temp = fullOrder[1].Replace("\n", "");
+        ingredientsChecklist = temp.Split('+');
+        
         // display the ingredients on the receipt
         string order = fullOrder[1].Replace("+", "\n");
         order_display.text = order;
         
         // play intro audio clip
-        
+        //AudioManager.S.orderVoices[0].Play(0);
+
     }
 
     void NewOrder()
@@ -111,13 +118,19 @@ public class Orders : MonoBehaviour
         orderName = fullOrder[0];
         OrderName.S.SetText();
         
+        // make an array of the ingredients for checking the score later
+        ingredientsChecklist = fullOrder[1].Split('+');
+        
         // display the ingredients on the receipt
         string order = fullOrder[1].Replace("+", "\n");
         order_display.text = order;
         
         // play associated audio clip
+        AudioManager.S.orderVoices[r-1].Play(0);
         
     }
+    
+    
 
     IEnumerator MoveReceipt()
     {

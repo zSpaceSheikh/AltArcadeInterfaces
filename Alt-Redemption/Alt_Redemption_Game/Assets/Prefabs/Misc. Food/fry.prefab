@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2004240436834707433}
   m_Layer: 0
   m_Name: fry
-  m_TagString: Ingredient
+  m_TagString: Fry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

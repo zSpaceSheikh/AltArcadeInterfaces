@@ -9,11 +9,11 @@ public class Timer : MonoBehaviour
     public float timeLength;
     private float currentTime;
 
-    private TextMeshProUGUI countdownText;
+    public TextMeshProUGUI countdownText;
     
     void Start()
     {
-        countdownText = FindObjectOfType<TextMeshProUGUI>();
+        //countdownText = FindObjectOfType<TextMeshProUGUI>();
         countdownText.text = "";
         
         currentTime = timeLength;

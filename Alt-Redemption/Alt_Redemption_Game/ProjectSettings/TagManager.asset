@@ -4,17 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Recycle
-  - Compost
-  - Trash
-  - Ingredient
   - Bins
   - Bun
-  - Burger
+  - Burger Patty
   - Bacon
   - Cheese
   - Tomato
   - Lettuce
+  - Ingredient
+  - Chili Pepper
+  - Pumpkin
+  - Mushroom
+  - Drink
+  - Fry
   layers:
   - Default
   - TransparentFX
@@ -22,7 +24,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Glow
+  - 
   - 
   - 
   - 

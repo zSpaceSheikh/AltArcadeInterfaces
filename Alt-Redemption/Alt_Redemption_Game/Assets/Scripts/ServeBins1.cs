@@ -16,7 +16,7 @@ public class ServeBins1 : MonoBehaviour
     private bool serve1 = true;
 
     public float binSpeed;
-    private Vector3 targetPos1 = new Vector3(6f, -4.82f, -0.97f);
+    private Vector3 targetPos1 = new Vector3(4.5f, -4.82f, -0.97f);
     
     private KeywordRecognizer keywordRecognizer;
     private Dictionary<string, Action> actions = new Dictionary<string, Action>();
@@ -55,6 +55,9 @@ public class ServeBins1 : MonoBehaviour
             
             order1Floor.SetActive(false);
             
+            // activate register sound 
+            AudioManager.S.RegisterSound();
+            
             serve1 = false;
             StartCoroutine(SendOrder1(b1));
         }
@@ -77,10 +80,11 @@ public class ServeBins1 : MonoBehaviour
             Vector3 pos = Vector3.MoveTowards(b.transform.position, targetPos1, binSpeed * Time.deltaTime);
             b.GetComponent<Rigidbody>().MovePosition(pos);
             
-            if (pos.x == 6f)
+            if (pos.x >= 4.5f)
             {
                 //Debug.Log("bin 1 arrived!");
                 sent1 = true;
+                Score.S.readyToCheck = true;
             }
             
             yield return null;
