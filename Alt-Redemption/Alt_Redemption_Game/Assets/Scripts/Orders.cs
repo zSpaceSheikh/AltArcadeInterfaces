@@ -32,7 +32,7 @@ public class Orders : MonoBehaviour
     public float receiptSpeed = 3f;
     
     private float t;
-    
+    private int prevR;    
     public static Orders S;
     
     private void Awake()
@@ -90,6 +90,7 @@ public class Orders : MonoBehaviour
     {
         // grab the first order
         string[] fullOrder = ordersList[0].Split('=');
+        prevR = 0;
         
         // display the order name on the receipt
         orderName = fullOrder[0];
@@ -112,6 +113,12 @@ public class Orders : MonoBehaviour
     {
         // choose a random order
         int r = Random.Range(1, ordersList.Length);
+        if (r == prevR)
+        {
+            prevR = r;
+            r = Random.Range(1, ordersList.Length);
+        }
+        prevR = r;
         string[] fullOrder = ordersList[r].Split('=');
         
         // display the order name on the receipt

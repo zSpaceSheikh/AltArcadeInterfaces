@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.ProBuilder;
 using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
@@ -19,10 +20,32 @@ public class Timer : MonoBehaviour
         currentTime = timeLength;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        currentTime -= 1 * Time.deltaTime;
-        countdownText.text = currentTime.ToString("0");
+        if (currentTime > 0)
+        {
+            currentTime -= 1 * Time.deltaTime;
+        }
+        else
+        {
+            currentTime = 0;
+        }
+        //countdownText.text = currentTime.ToString("0");
+        
+        DiplayTime(currentTime);
     }
+
+    void DiplayTime(float timeToDisplay)
+    {
+        if (timeToDisplay < 0)
+        {
+            timeToDisplay = 0;
+        }
+
+        float mins = Mathf.FloorToInt(timeToDisplay / 60);
+        float secs = Mathf.FloorToInt(timeToDisplay % 60);
+        
+        countdownText.text = string.Format("{0:00}:{1:00}", mins, secs);
+    }
+    
 }

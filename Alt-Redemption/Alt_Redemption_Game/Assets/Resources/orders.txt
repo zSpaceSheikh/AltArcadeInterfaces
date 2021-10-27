@@ -2,4 +2,4 @@ Plinko Burger:=Burger Patty+Bun+ ----------
 Spicy Boi:=Burger Patty+Bun+Cheese+Lettuce+Chili Pepper+ ----------
 Fungus Among-us:=Burger Patty+Bun+Cheese+Mushroom+ ----------
 --:=Drink+ ----------
-Spooky Burger & Fry:=Burger Patty+Bun+Pumpkin+ ----------
+Spooky Burger & Fry:=Burger Patty+Bun+Pumpkin+Fry+ ----------
