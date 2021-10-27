@@ -6,9 +6,9 @@ Documentation and code for projects developed in the Fall 2021 semester of ATLS 
 
 # Plinko Burger!
 
-***Plinko Burger is still in development but may involve digital burger making! With alternative controller spatulas and order headsets***
+***Plinko Burger is still in development but will feature alternative controller squeezy bottles and vocal commands to control a virtual, burger making plinko machine***
 
-<img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/PlinkoBurger-Prototype.gif" width="60%">
+<img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/PlinkoBurger-Glow.gif" width="75%">
 
 [Documentation](https://github.com/zSpaceSheikh/AltArcadeInterfaces/tree/main/Alt-Redemption)
 
