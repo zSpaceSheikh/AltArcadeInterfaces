@@ -12,7 +12,7 @@ The unmentioned elephant in the room (now mentioned) is definitely the ordererin
 
 I wish we had the time and resources to hook up and *actual* receipt printer to the game, which printed out *actual* receipts that the players had to compare to but... ¯\_(ツ)_/¯ I guess we'll see if that happens...
 
-<!-- insert updated gif here -->
+<img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/PlinkoBurger-Glow.gif" width="80%">
 
 ## Plinko Burger, Order Up
 
@@ -22,7 +22,7 @@ Lots of functional updates *distant cheering* including moving order bins, propu
 
 The mystery box is full of random food items which will fall at on command, including: pineapple, french fries, and even pumpkins? And once the ingredients have been collected in the correct bin, players can ship off the order and watch the food fall into a container below and send off to be scored. 
 
-<img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/PlinkoBurger-Bins.gif" width="60%">
+<img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/PlinkoBurger-Bins.gif" width="90%">
 
 
 ## A Plinko Burger Prototype!
@@ -34,7 +34,7 @@ The newest plinko prototype has some super snazzy updates! Now with voice contro
 Our next task will be to have specific orders, scoring, and a physical spatula controller for the paddle at the bottom. Other fun options include a headset with a mic that you can yell the orders you are hearing, out to the plinko machine. 
 
 
-<img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/PlinkoBurger-Prototype.gif" width="60%">
+<img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/PlinkoBurger-Prototype.gif" width="80%">
 
 
 ## Burger Plinko (*nomnomnom*)
