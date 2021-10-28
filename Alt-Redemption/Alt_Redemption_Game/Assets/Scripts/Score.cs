@@ -8,7 +8,9 @@ public class Score : MonoBehaviour
     private List<string> _collectedIngredients = new List<string>();
 
     public bool readyToCheck = false;
+    
     public int playerScore = 0;
+    public int numOrders = 0;
 
     public static Score S;
 
@@ -26,6 +28,9 @@ public class Score : MonoBehaviour
         {
             Debug.Log("Ingredients:" + _collectedIngredients.Count);
             Debug.Log("Order List:" + Orders.S.ingredientsChecklist.Length);
+            
+            // add 1 to the total number of completed orders
+            numOrders++;
             
             
             // for each ingredient we collected check against each ingredient in the order
@@ -54,17 +59,7 @@ public class Score : MonoBehaviour
     {
         Debug.Log("Checking order...");
         
-        if (collision.gameObject.CompareTag("Bins"))
-        {
-            //Destroy(collision.gameObject);
-        }
-        else
-        {
-            //Debug.Log(collision.gameObject.tag);
-            _collectedIngredients.Add(collision.gameObject.tag);
-            Destroy(collision.gameObject);
-            //Debug.Log(_collectedIngredients.Count);
-        }
-        
+        _collectedIngredients.Add(collision.gameObject.tag);
+        Destroy(collision.gameObject);
     }
 }

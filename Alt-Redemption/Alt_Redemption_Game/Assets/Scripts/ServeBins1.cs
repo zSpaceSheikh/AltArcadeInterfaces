@@ -41,7 +41,7 @@ public class ServeBins1 : MonoBehaviour
             
             order1Floor.SetActive(false);
             
-            serve1 = false;
+            serve1 = true;
             StartCoroutine(SendOrder1(b1));
         }
     }

@@ -12,16 +12,21 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="AudioManager.cs" t="Include" />
+          <e p="EndScreen.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
+          <e p="Old Scripts" t="Include">
+            <e p="ServeBins.cs" t="Include" />
+            <e p="StuffSpawner.cs" t="Include" />
+          </e>
           <e p="OrderName.cs" t="Include" />
           <e p="Orders.cs" t="Include" />
+          <e p="OrderUp.cs" t="Include" />
           <e p="Paddle.cs" t="Include" />
           <e p="Score.cs" t="Include" />
           <e p="ScoreText.cs" t="Include" />
-          <e p="ServeBins.cs" t="Include" />
           <e p="ServeBins1.cs" t="Include" />
+          <e p="StartScreen.cs" t="Include" />
           <e p="StuffDespawner.cs" t="Include" />
-          <e p="StuffSpawner.cs" t="Include" />
           <e p="Timer.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">

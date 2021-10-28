@@ -10,6 +10,7 @@ using Random = UnityEngine.Random;
 public class GameManager : MonoBehaviour
 {
     public bool autoSpawn;
+    public int spawnMultiplier;
     public float lightUpTime;
     public float spawnTimer;
 
@@ -182,8 +183,8 @@ public class GameManager : MonoBehaviour
     
     private void Burger()
     {
-        //Debug.Log("spawn burger!");
-        spawnIngredient(burg, hopBurger);
+        for (int i = 0; i < spawnMultiplier; i++) {spawnIngredient(burg, hopBurger);}
+        //spawnIngredient(burg, hopBurger);
         
         // light up the burger bin
         burgerMR.material.EnableKeyword("_EMISSION");
@@ -192,8 +193,8 @@ public class GameManager : MonoBehaviour
     
     private void Bacon()
     {
-        //Debug.Log("spawn bacon!");
-        spawnIngredient(bacon, hopBacon);
+        for (int i = 0; i < spawnMultiplier; i++) {spawnIngredient(bacon, hopBacon);}
+        //spawnIngredient(bacon, hopBacon);
         
         // light up the bacon bin
         baconMR.material.EnableKeyword("_EMISSION");
@@ -202,8 +203,8 @@ public class GameManager : MonoBehaviour
     
     private void Lettuce()
     {
-        //Debug.Log("spawn lettuce!");
-        spawnIngredient(lettuce, hopLettuce);
+        for (int i = 0; i < spawnMultiplier; i++) {spawnIngredient(lettuce, hopLettuce);}
+        //spawnIngredient(lettuce, hopLettuce);
         
         // light up the lettuce bin
         lettuceMR.material.EnableKeyword("_EMISSION");
@@ -213,8 +214,11 @@ public class GameManager : MonoBehaviour
     private void Buns()
     {
         //Debug.Log("spawn buns!");
-        spawnIngredient(bunTop, hopBun);
-        spawnIngredient(bunBot, hopBun);
+        for (int i = 0; i < spawnMultiplier; i++)
+        {
+            spawnIngredient(bunTop, hopBun);
+            spawnIngredient(bunBot, hopBun);
+        }
         
         // light up the bun bin
         bunMR.material.EnableKeyword("_EMISSION");
@@ -224,7 +228,8 @@ public class GameManager : MonoBehaviour
     private void Cheese()
     {
         //Debug.Log("spawn cheese!");
-        spawnIngredient(cheese, hopCheese);
+        for (int i = 0; i < spawnMultiplier; i++) {spawnIngredient(cheese, hopCheese);}
+        //spawnIngredient(cheese, hopCheese);
         
         // light up the cheese bin
         cheeseMR.material.EnableKeyword("_EMISSION");
@@ -234,7 +239,8 @@ public class GameManager : MonoBehaviour
     private void Tomato()
     {
         //Debug.Log("spawn tomato!");
-        spawnIngredient(tomato, hopTomato);
+        for (int i = 0; i < spawnMultiplier; i++) {spawnIngredient(tomato, hopTomato);}
+        //spawnIngredient(tomato, hopTomato);
         
         // light up the tomato bin
         tomatoMR.material.EnableKeyword("_EMISSION");

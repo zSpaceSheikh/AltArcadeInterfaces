@@ -9,7 +9,7 @@ public class Orders : MonoBehaviour
 {
     public GameObject receipt;
     public GameObject orderText;
-    
+
     private TextAsset ordersTxt;
     private string[] ordersList;
     private Text order_display;
@@ -32,7 +32,15 @@ public class Orders : MonoBehaviour
     public float receiptSpeed = 3f;
     
     private float t;
-    private int prevR;    
+    private int prevR;
+
+    public Image timerBar;
+    public float firstOrderTime;
+    public float otherOrderTime;
+    private float orderTime;
+    private float timeLeft;
+
+
     public static Orders S;
     
     private void Awake()
@@ -49,6 +57,11 @@ public class Orders : MonoBehaviour
         order_display = GetComponentInChildren<Text>();
         order_display.text = "";
         StartCoroutine(GetTextFromFile());
+        
+        // timer set up
+        //timerBar = GetComponent<Image>();
+        timeLeft = firstOrderTime;
+        orderTime = firstOrderTime;
     }
 
     IEnumerator GetTextFromFile()
@@ -68,6 +81,7 @@ public class Orders : MonoBehaviour
             firstOrder = false;
             newOrder = false;
             
+            //move the receipt
             StartCoroutine(MoveReceipt());
         }
 
@@ -76,11 +90,37 @@ public class Orders : MonoBehaviour
         {
             NewOrder();
             newOrder = false;
+            
+            // update the timer to reset
+            timeLeft = orderTime;
+            
+            //move the receipt
             StartCoroutine(MoveReceipt());
         }
         else
         {
             // maybe check for new ingredients to check off from the list?
+        }
+        
+        
+        // timer updating
+        if (timeLeft > 0)
+        {
+            timeLeft -= Time.deltaTime;
+            timerBar.fillAmount = timeLeft / orderTime;
+        }
+        
+        else if (timeLeft <= 0)
+        {
+            // reset the time and bar
+            orderTime = otherOrderTime;
+            timeLeft = orderTime;
+            timerBar.fillAmount = 1;
+            
+            // get a new order
+            NewOrder();
+            newOrder = false;
+            StartCoroutine(MoveReceipt());
         }
         
     }
@@ -135,6 +175,8 @@ public class Orders : MonoBehaviour
         // play associated audio clip
         AudioManager.S.orderVoices[r-1].Play(0);
         
+        // update the ordertime
+        orderTime = otherOrderTime;
     }
     
     

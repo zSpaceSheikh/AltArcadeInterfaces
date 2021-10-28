@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.ProBuilder;
 using UnityEngine.UI;
 
@@ -29,6 +30,7 @@ public class Timer : MonoBehaviour
         else
         {
             currentTime = 0;
+            GameEnd();
         }
         //countdownText.text = currentTime.ToString("0");
         
@@ -46,6 +48,11 @@ public class Timer : MonoBehaviour
         float secs = Mathf.FloorToInt(timeToDisplay % 60);
         
         countdownText.text = string.Format("{0:00}:{1:00}", mins, secs);
+    }
+    
+    private void GameEnd()
+    {
+        SceneManager.LoadScene("EndScene");
     }
     
 }
