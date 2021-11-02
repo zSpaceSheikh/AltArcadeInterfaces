@@ -10,7 +10,8 @@ using Random = UnityEngine.Random;
 public class GameManager : MonoBehaviour
 {
     public bool autoSpawn;
-    public int spawnMultiplier;
+    public int spawnMultiplierMax;
+    private int spawnMultiplier;
     public float lightUpTime;
     public float spawnTimer;
 
@@ -60,6 +61,10 @@ public class GameManager : MonoBehaviour
     public GameObject asparagus;
     public GameObject eggplant;
     public GameObject onion;
+    public GameObject friedEgg;
+    public GameObject donut;
+    public GameObject pickle;
+    public GameObject ham;
 
     // add more game object calls to model prefabs here -----------------------------------------
     
@@ -138,12 +143,16 @@ public class GameManager : MonoBehaviour
         actions.Add("eggplant", Eggplant);
         actions.Add("aubergine", Eggplant);
         actions.Add("Onion", Onion);
+        actions.Add("Fried Egg", FriedEgg);
+        actions.Add("Egg", FriedEgg);
+        actions.Add("Donut", Donut);
+        actions.Add("Pickle", Pickle);
+        actions.Add("Ham", Ham);
         
-
         // add more things to spawn here ------------------------
 
         // voice recognition stuff
-        keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
+        keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray(), ConfidenceLevel.Low);
         keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
         keywordRecognizer.Start();
 
@@ -156,6 +165,11 @@ public class GameManager : MonoBehaviour
         lettuceMR = hopLettuce.GetComponent<MeshRenderer>();
         cheeseMR = hopCheese.GetComponent<MeshRenderer>();
         mysteryMR = hopMystery.GetComponent<MeshRenderer>();
+    }
+
+    void Update()
+    {
+        spawnMultiplier = Random.Range(1, spawnMultiplierMax);
     }
 
 
@@ -177,14 +191,15 @@ public class GameManager : MonoBehaviour
         c.transform.Rotate(0, 0, aI);
         
         // activate the spawn sound
-        AudioManager.S.SpawnDing();
+        //AudioManager.S.SpawnDing();
     }
     
     
     private void Burger()
     {
         for (int i = 0; i < spawnMultiplier; i++) {spawnIngredient(burg, hopBurger);}
-        //spawnIngredient(burg, hopBurger);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
         
         // light up the burger bin
         burgerMR.material.EnableKeyword("_EMISSION");
@@ -194,7 +209,8 @@ public class GameManager : MonoBehaviour
     private void Bacon()
     {
         for (int i = 0; i < spawnMultiplier; i++) {spawnIngredient(bacon, hopBacon);}
-        //spawnIngredient(bacon, hopBacon);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
         
         // light up the bacon bin
         baconMR.material.EnableKeyword("_EMISSION");
@@ -204,7 +220,8 @@ public class GameManager : MonoBehaviour
     private void Lettuce()
     {
         for (int i = 0; i < spawnMultiplier; i++) {spawnIngredient(lettuce, hopLettuce);}
-        //spawnIngredient(lettuce, hopLettuce);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
         
         // light up the lettuce bin
         lettuceMR.material.EnableKeyword("_EMISSION");
@@ -219,6 +236,8 @@ public class GameManager : MonoBehaviour
             spawnIngredient(bunTop, hopBun);
             spawnIngredient(bunBot, hopBun);
         }
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
         
         // light up the bun bin
         bunMR.material.EnableKeyword("_EMISSION");
@@ -229,7 +248,8 @@ public class GameManager : MonoBehaviour
     {
         //Debug.Log("spawn cheese!");
         for (int i = 0; i < spawnMultiplier; i++) {spawnIngredient(cheese, hopCheese);}
-        //spawnIngredient(cheese, hopCheese);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
         
         // light up the cheese bin
         cheeseMR.material.EnableKeyword("_EMISSION");
@@ -240,7 +260,8 @@ public class GameManager : MonoBehaviour
     {
         //Debug.Log("spawn tomato!");
         for (int i = 0; i < spawnMultiplier; i++) {spawnIngredient(tomato, hopTomato);}
-        //spawnIngredient(tomato, hopTomato);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
         
         // light up the tomato bin
         tomatoMR.material.EnableKeyword("_EMISSION");
@@ -254,6 +275,9 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < 7; i++) {
             spawnIngredient(fries, hopMystery);
         }
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
+        
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
     }
@@ -263,6 +287,8 @@ public class GameManager : MonoBehaviour
         spawnIngredient(drink, hopMystery);
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
     }
     
     private void Apple()
@@ -270,6 +296,8 @@ public class GameManager : MonoBehaviour
         spawnIngredient(apple, hopMystery);
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
     }
     
     private void Banana()
@@ -277,6 +305,8 @@ public class GameManager : MonoBehaviour
         spawnIngredient(banana, hopMystery);
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
     }
     
     private void Blueberry()
@@ -286,6 +316,8 @@ public class GameManager : MonoBehaviour
         }
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
     }
     
     private void Pineapple()
@@ -293,6 +325,8 @@ public class GameManager : MonoBehaviour
         spawnIngredient(pineapple, hopMystery);
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
     }
     
     private void Chili()
@@ -300,6 +334,8 @@ public class GameManager : MonoBehaviour
         spawnIngredient(chili, hopMystery);
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
     }
     
     private void Carrot()
@@ -307,6 +343,8 @@ public class GameManager : MonoBehaviour
         spawnIngredient(carrot, hopMystery);
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
     }
     
     private void Avocado()
@@ -314,6 +352,8 @@ public class GameManager : MonoBehaviour
         spawnIngredient(avocado, hopMystery);
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
     }
     
     private void Beet()
@@ -321,6 +361,8 @@ public class GameManager : MonoBehaviour
         spawnIngredient(beet, hopMystery);
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
     }
     
     private void Watermelon()
@@ -328,6 +370,8 @@ public class GameManager : MonoBehaviour
         spawnIngredient(watermelon, hopMystery);
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
     }
     
     private void Squash()
@@ -335,6 +379,8 @@ public class GameManager : MonoBehaviour
         spawnIngredient(squash, hopMystery);
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
     }
     
     private void Papaya()
@@ -342,6 +388,8 @@ public class GameManager : MonoBehaviour
         spawnIngredient(papaya, hopMystery);
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
     }
     
     private void Pumpkin()
@@ -349,6 +397,8 @@ public class GameManager : MonoBehaviour
         spawnIngredient(pumpkin, hopMystery);
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
     }
     
     private void Strawberry()
@@ -356,6 +406,8 @@ public class GameManager : MonoBehaviour
         spawnIngredient(strawberry, hopMystery);
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
     }
     
     private void Radish()
@@ -363,6 +415,8 @@ public class GameManager : MonoBehaviour
         spawnIngredient(radish, hopMystery);
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
     }
     
     private void Leek()
@@ -370,6 +424,8 @@ public class GameManager : MonoBehaviour
         spawnIngredient(leek, hopMystery);
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
     }
     
     private void Pear()
@@ -377,6 +433,8 @@ public class GameManager : MonoBehaviour
         spawnIngredient(pear, hopMystery);
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
     }
     
     private void Pea()
@@ -386,6 +444,8 @@ public class GameManager : MonoBehaviour
         }
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
     }
     
     private void Mushroom()
@@ -393,6 +453,8 @@ public class GameManager : MonoBehaviour
         spawnIngredient(mushroom, hopMystery);
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
     }
     
     private void Coconut()
@@ -400,6 +462,8 @@ public class GameManager : MonoBehaviour
         spawnIngredient(coconut, hopMystery);
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
     }
     
     private void Broccoli()
@@ -407,6 +471,8 @@ public class GameManager : MonoBehaviour
         spawnIngredient(broccoli, hopMystery);
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
     }
     
     private void Asparagus()
@@ -414,6 +480,8 @@ public class GameManager : MonoBehaviour
         spawnIngredient(asparagus, hopMystery);
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
     }
     
     private void Eggplant()
@@ -421,6 +489,8 @@ public class GameManager : MonoBehaviour
         spawnIngredient(eggplant, hopMystery);
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
     }
     
     private void Onion()
@@ -428,6 +498,44 @@ public class GameManager : MonoBehaviour
         spawnIngredient(onion, hopMystery);
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
+    }
+    
+    private void FriedEgg()
+    {
+        spawnIngredient(friedEgg, hopMystery);
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
+    }
+    
+    private void Donut()
+    {
+        spawnIngredient(donut, hopMystery);
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
+    }
+    
+    private void Pickle()
+    {
+        spawnIngredient(pickle, hopMystery);
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
+    }
+    
+    private void Ham()
+    {
+        spawnIngredient(ham, hopMystery);
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
     }
 
     // add more stuff spawning functions here -----------------------------------------

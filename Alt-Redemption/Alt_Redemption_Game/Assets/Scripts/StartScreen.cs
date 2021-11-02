@@ -21,13 +21,14 @@ public class StartScreen : MonoBehaviour
         
         
         // voice recognition stuff
-        keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
+        keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray(), ConfidenceLevel.Low);
         keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
         keywordRecognizer.Start();
     }
 
     private void GameStart()
     {
+        AudioManager.S.EndSound();
         SceneManager.LoadScene("PlinkoBurgerSingleOrder");
     }
     

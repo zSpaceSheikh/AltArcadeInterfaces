@@ -39,6 +39,7 @@ public class Orders : MonoBehaviour
     public float otherOrderTime;
     private float orderTime;
     private float timeLeft;
+    private float prevTime;
 
 
     public static Orders S;
@@ -93,7 +94,7 @@ public class Orders : MonoBehaviour
             
             // update the timer to reset
             timeLeft = orderTime;
-            
+
             //move the receipt
             StartCoroutine(MoveReceipt());
         }
@@ -103,13 +104,12 @@ public class Orders : MonoBehaviour
         }
         
         
-        // timer updating
         if (timeLeft > 0)
         {
             timeLeft -= Time.deltaTime;
             timerBar.fillAmount = timeLeft / orderTime;
         }
-        
+        // if the time has run out, get a new order
         else if (timeLeft <= 0)
         {
             // reset the time and bar
@@ -117,12 +117,28 @@ public class Orders : MonoBehaviour
             timeLeft = orderTime;
             timerBar.fillAmount = 1;
             
+            // play a buzzer sound for losing the order
+            AudioManager.S.OrderFail();
+            
             // get a new order
             NewOrder();
             newOrder = false;
             StartCoroutine(MoveReceipt());
         }
         
+        float time = Mathf.FloorToInt(timeLeft % 60);
+
+        //Debug.Log(time);
+        if (time < 16)
+        {
+            if (prevTime - time == 1)
+            {
+                AudioManager.S.ClockTicks();
+            }
+            // update the previous time 
+            prevTime = time;
+        }
+
     }
 
 
@@ -215,4 +231,5 @@ public class Orders : MonoBehaviour
         atPointB = false;
         yield return null;
     }
+    
 }

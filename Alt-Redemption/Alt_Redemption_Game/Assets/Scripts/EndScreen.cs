@@ -28,7 +28,7 @@ public class EndScreen : MonoBehaviour
         actions.Add("one more time", GameStartScreen);
 
         // voice recognition stuff
-        keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
+        keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray(), ConfidenceLevel.Low);
         keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
         keywordRecognizer.Start();
     }

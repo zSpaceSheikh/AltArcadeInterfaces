@@ -26,7 +26,7 @@ public class OrderUp : MonoBehaviour
         actions.Add("order up", Order1Check);
 
         // voice recognition stuff
-        keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
+        keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray(), ConfidenceLevel.Low);
         keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
         keywordRecognizer.Start();
     }

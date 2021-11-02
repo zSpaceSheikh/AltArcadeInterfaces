@@ -9,6 +9,14 @@ public class AudioManager : MonoBehaviour
     public AudioSource spawnDing;
     public AudioSource receiptPrint;
     public AudioSource registerOrder;
+    public AudioSource timerAlarm;
+    public AudioSource endSound;
+    public AudioSource clockTick;
+    public AudioSource orderFail;
+    public AudioSource fireCrackle;
+    public AudioSource partyHorn;
+    public AudioSource pop;
+    public AudioSource whoosh;
 
     public AudioSource[] orderVoices;
     
@@ -33,7 +41,9 @@ public class AudioManager : MonoBehaviour
     
     public void SpawnDing()
     {
-        spawnDing.Play();
+        float wobble = Random.Range(0.85f,1.15f);
+        spawnDing.pitch = wobble;
+        spawnDing.PlayOneShot(spawnDing.clip, 1f);
     }
     
     public void ReceiptPrint()
@@ -44,5 +54,43 @@ public class AudioManager : MonoBehaviour
     public void RegisterSound()
     {
         registerOrder.Play();
+    }
+    
+    public void TimerAlarm()
+    {
+        timerAlarm.Play();
+    }
+    
+    public void EndSound()
+    {
+        endSound.Play();
+    }
+    
+    public void ClockTicks()
+    {
+        clockTick.Play();
+    }
+    
+    public void OrderFail()
+    {
+        orderFail.Play();
+    }
+    
+    public void FireCrackle()
+    {
+        fireCrackle.Play();
+    }
+    
+    public void PartyHorn()
+    {
+        partyHorn.Play();
+    }
+    public void PegPop()
+    {
+        pop.Play();
+    }
+    public void ShakeWhoosh()
+    {
+        whoosh.Play();
     }
 }
