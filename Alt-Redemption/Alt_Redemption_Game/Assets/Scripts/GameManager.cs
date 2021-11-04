@@ -177,6 +177,7 @@ public class GameManager : MonoBehaviour
     {
         //Debug.Log(Speech.text);
         actions[Speech.text].Invoke();
+        StickyNoteHints.S.hasSpoken = true;
     }
     
     private void spawnIngredient(GameObject ingredient, GameObject hopper)
