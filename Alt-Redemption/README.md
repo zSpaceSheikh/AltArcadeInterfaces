@@ -1,6 +1,15 @@
 # Plinko Burger!
 
-***Plinko Burger is still in development but may involve digital burger making! With alternative controller squeezy bottles and an order headset***
+***Plinko Burger is still in development but will involve digital burger making, via plinko!! With alternative controller squeezy bottles and an order headset***
+
+## Plinko Burger, Coming Soon!
+
+*Is that a fire!?*
+
+Somehow this update both makes things simpler, and adds more complexity and options for interactions! The whole serving bins situation got overhauled so that the orders go through faster and with less issues. Each individual order now has a timer and an accompanying unique audio clip of someone ordering. With 30+ orders! Sticky notes will appear on the receipt printer with tips, including if the player hasn't spoken anything to the plinko machine. Also, different words will now trigger the plinko machine to shake, catch on fire, spit out confetti and more! A number of other small updates and optimizations have been made to the backend of how the game is running, but those are pretty boring so I will just let you guess what that even means and move on lol. Below is a short gif of some of the events that can be initiated by different words like "what" "oh my god" "shit" and "sorry" in the machine. 
+
+<img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/PlinkoBurger-Chaos.gif" width="80%">
+
 
 ## Welcome to Plinko Burger!
 
