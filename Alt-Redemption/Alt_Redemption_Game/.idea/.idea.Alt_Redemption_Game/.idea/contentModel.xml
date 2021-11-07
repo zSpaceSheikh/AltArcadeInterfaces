@@ -63,6 +63,7 @@
           <e p="OrderUp.cs" t="Include" />
           <e p="Paddle.cs" t="Include" />
           <e p="PlinkoChaos.cs" t="Include" />
+          <e p="QuitGame.cs" t="Include" />
           <e p="Score.cs" t="Include" />
           <e p="ScoreText.cs" t="Include" />
           <e p="ServeBins1.cs" t="Include" />

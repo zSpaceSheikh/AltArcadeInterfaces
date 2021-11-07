@@ -13,6 +13,8 @@ public class PlinkoChaos : MonoBehaviour
     
     public ParticleSystem redConfetti;
     public ParticleSystem yellowConfetti;
+    public ParticleSystem blueConfetti;
+    public ParticleSystem greenConfetti;
     public ParticleSystem confettiExplosion;
     public ParticleSystem rightTrashFire;
     public ParticleSystem leftTrashFire;
@@ -26,12 +28,18 @@ public class PlinkoChaos : MonoBehaviour
     {
         actions.Add("Oops", Shake);
         actions.Add("Umm", Shake);
+        
         actions.Add("Sorry", ManagerAudio);
+        
         actions.Add("What", Fire);
         actions.Add("Come on", Fire);
-        actions.Add("Shit", Confetti);
-        actions.Add("Fuck", Confetti);
-        actions.Add("Damn", Confetti);
+        
+        actions.Add("Fuck", ConfettiExplosion);
+        actions.Add("Shit", YellowConfetti);
+        actions.Add("Damn", RedConfetti);
+        actions.Add("Bitch", BlueConfetti);
+        actions.Add("Hell", GreenConfetti);
+        
         actions.Add("Oh god", MissingPegs);
         actions.Add("Oh gosh", MissingPegs);
         actions.Add("Oh my god", MissingPegs);
@@ -57,12 +65,43 @@ public class PlinkoChaos : MonoBehaviour
         StartCoroutine(FireForABit());
     }
     
-    private void Confetti()
+    private void ConfettiExplosion()
+    {
+        Debug.Log("Confetti!");
+        
+        confettiExplosion.Play();
+        AudioManager.S.PartyHorn();
+    }
+    
+    private void BlueConfetti()
+    {
+        Debug.Log("Confetti!");
+        
+        blueConfetti.Play();
+        AudioManager.S.PartyHorn();
+    }
+    
+    private void GreenConfetti()
+    {
+        Debug.Log("Confetti!");
+        
+        greenConfetti.Play();
+        AudioManager.S.PartyHorn();
+    }
+    
+    private void YellowConfetti()
+    {
+        Debug.Log("Confetti!");
+        
+        yellowConfetti.Play();
+        AudioManager.S.PartyHorn();
+    }
+    
+    private void RedConfetti()
     {
         Debug.Log("Confetti!");
         
         redConfetti.Play();
-        yellowConfetti.Play();
         AudioManager.S.PartyHorn();
     }
     

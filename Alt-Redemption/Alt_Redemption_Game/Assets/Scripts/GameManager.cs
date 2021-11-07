@@ -87,6 +87,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        // play the background noise
+        AudioManager.S.BackgroundNoise();
+        
+        // start the autospawn
         if (autoSpawn)
         {
             StartCoroutine(spawnIngredients());

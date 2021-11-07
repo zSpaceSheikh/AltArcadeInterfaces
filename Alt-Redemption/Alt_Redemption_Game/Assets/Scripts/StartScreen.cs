@@ -19,6 +19,8 @@ public class StartScreen : MonoBehaviour
         actions.Add("Welcome to plinko burger, home of the plinko burger, can I take your order?", GameStart);
         actions.Add("game start", GameStart);
         
+        // start the music
+        AudioManager.S.StartScreenMusic();
         
         // voice recognition stuff
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray(), ConfidenceLevel.Low);
@@ -29,6 +31,7 @@ public class StartScreen : MonoBehaviour
     private void GameStart()
     {
         AudioManager.S.EndSound();
+        AudioManager.S.startScreenMusic.Stop();
         SceneManager.LoadScene("PlinkoBurgerSingleOrder");
     }
     

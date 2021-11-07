@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    
+    public AudioSource startScreenMusic;
+    public AudioSource backgroundNoise;
     public AudioSource spawnDing;
     public AudioSource receiptPrint;
     public AudioSource registerOrder;
@@ -37,6 +38,16 @@ public class AudioManager : MonoBehaviour
         //{
         //    PlayerHitSound();
         //}
+    }
+    
+    public void StartScreenMusic()
+    {
+        startScreenMusic.Play();
+    }
+    
+    public void BackgroundNoise()
+    {
+        backgroundNoise.Play();
     }
     
     public void SpawnDing()
