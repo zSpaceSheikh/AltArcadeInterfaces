@@ -11493,7 +11493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef257ee016ab5834785fcfaa6a8eca20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLength: 30
+  timeLength: 240
   orderAddTime: 15
   sceneLight: {fileID: 705507994}
   countdownText: {fileID: 898631694}
