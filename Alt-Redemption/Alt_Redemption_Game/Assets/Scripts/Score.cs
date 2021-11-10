@@ -31,7 +31,12 @@ public class Score : MonoBehaviour
             
             // add 1 to the total number of completed orders
             numOrders++;
-            
+
+            // add a little time if they submitted an order with stuff in it
+            if (_collectedIngredients.Count > 0)
+            {
+                Timer.S.AddTime();
+            }
             
             // for each ingredient we collected check against each ingredient in the order
             for (int i=0; i < _collectedIngredients.Count; i++)

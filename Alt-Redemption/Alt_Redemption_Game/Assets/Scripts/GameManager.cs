@@ -149,9 +149,11 @@ public class GameManager : MonoBehaviour
         actions.Add("Onion", Onion);
         actions.Add("Fried Egg", FriedEgg);
         actions.Add("Egg", FriedEgg);
+        actions.Add("egg", FriedEgg);
         actions.Add("Donut", Donut);
         actions.Add("Pickle", Pickle);
         actions.Add("Ham", Ham);
+        actions.Add("Fruit", RandFruit);
         
         // add more things to spawn here ------------------------
 
@@ -537,6 +539,58 @@ public class GameManager : MonoBehaviour
     private void Ham()
     {
         spawnIngredient(ham, hopMystery);
+        mysteryMR.material.EnableKeyword("_EMISSION");
+        Invoke("MysteryLightUp", lightUpTime);
+        // activate the spawn sound
+        AudioManager.S.SpawnDing();
+    }
+    
+    private void RandFruit()
+    {
+        int f = Random.Range(0, 6);
+
+        if (f == 0)
+        {
+            spawnIngredient(strawberry, hopMystery);
+            spawnIngredient(strawberry, hopMystery);
+            spawnIngredient(strawberry, hopMystery);
+            spawnIngredient(strawberry, hopMystery);
+        }
+        else if (f == 1)
+        {
+            spawnIngredient(papaya, hopMystery);
+            spawnIngredient(papaya, hopMystery);
+            spawnIngredient(papaya, hopMystery);
+        }
+        else if (f == 2)
+        {
+            spawnIngredient(watermelon, hopMystery);
+            spawnIngredient(watermelon, hopMystery);
+        }
+        else if (f == 3)
+        {
+            spawnIngredient(pear, hopMystery);
+            spawnIngredient(pear, hopMystery);
+            spawnIngredient(pear, hopMystery);
+            spawnIngredient(pear, hopMystery);
+        }
+        else if (f == 4)
+        {
+            spawnIngredient(banana, hopMystery);
+            spawnIngredient(banana, hopMystery);
+            spawnIngredient(banana, hopMystery);
+            
+        }
+        else
+        {
+            spawnIngredient(strawberry, hopMystery);
+            spawnIngredient(papaya, hopMystery);
+            spawnIngredient(watermelon, hopMystery);
+            spawnIngredient(pear, hopMystery);
+            spawnIngredient(banana, hopMystery);
+            spawnIngredient(apple, hopMystery);
+        }
+        
         mysteryMR.material.EnableKeyword("_EMISSION");
         Invoke("MysteryLightUp", lightUpTime);
         // activate the spawn sound

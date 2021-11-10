@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -34,6 +35,8 @@ public class Orders : MonoBehaviour
     private float t;
     private int prevR;
 
+    public TextMeshProUGUI orderBinText;
+
     public Image timerBar;
     public float firstOrderTime;
     public float otherOrderTime;
@@ -58,6 +61,9 @@ public class Orders : MonoBehaviour
         order_display = GetComponentInChildren<Text>();
         order_display.text = "";
         StartCoroutine(GetTextFromFile());
+        
+        // order up text set up
+        orderBinText.text = "";
         
         // timer set up
         //timerBar = GetComponent<Image>();
@@ -117,6 +123,9 @@ public class Orders : MonoBehaviour
             timeLeft = orderTime;
             timerBar.fillAmount = 1;
             
+            // reset the order up text
+            orderBinText.text = "";
+            
             // play a buzzer sound for losing the order
             AudioManager.S.OrderFail();
             
@@ -131,6 +140,9 @@ public class Orders : MonoBehaviour
         //Debug.Log(time);
         if (time < 16)
         {
+            // turn on the order up text
+            orderBinText.text = "'ORDER UP'"; 
+            
             if (prevTime - time == 1)
             {
                 AudioManager.S.ClockTicks();

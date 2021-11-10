@@ -13,7 +13,20 @@ public class Timer : MonoBehaviour
     
     private float secPrev = 15f;
 
+    public float orderAddTime = 10f;
+    public Light sceneLight;
+
     public TextMeshProUGUI countdownText;
+    
+    public static Timer S;
+    
+    private void Awake()
+    {
+        if (S == null)
+        {
+            S = this;
+        }
+    }
     
     void Start()
     {
@@ -54,22 +67,44 @@ public class Timer : MonoBehaviour
         countdownText.text = string.Format("{0:00}:{1:00}", mins, secs);
         
         
-        // sound an alarm for the last 15 seconds
-        if (secs < 16 && mins == 0)
+        // sound an alarm for the last 25 seconds
+        if (secs < 26 && mins == 0)
         {
             //Debug.Log("secs: " + secs + "  secPrev: " + secPrev);
             if (secPrev - secs == 1)
             {
                 if (secs == 0) { AudioManager.S.EndSound(); }
-                else{ AudioManager.S.TimerAlarm(); }
+                else
+                {
+                    // make the alarm sound go off
+                    AudioManager.S.TimerAlarm();
+                    
+                    // flash the lights red on the even numbers
+                    if (secs % 2f == 0f)
+                    {
+                        sceneLight.color = Color.red;
+                    }
+                    // flash the lights white on the even numbers
+                    else{sceneLight.color = Color.white;}
+                    
+                    
+                }
             }
+            
             secPrev = secs;
         }
     }
     
+    public void AddTime()
+    {
+        // add time to the timer
+        currentTime += orderAddTime;
+    }
+    
+
     private void GameEnd()
     {
         SceneManager.LoadScene("EndScene");
     }
-    
+
 }

@@ -42,6 +42,8 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    Unity.Timeline.Editor.dll:
+    - TimelineProjectSettings
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -92,33 +94,33 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1886}
+      Script: {instanceID: 1888}
     - Class: 114
-      Script: {instanceID: 2224}
+      Script: {instanceID: 2226}
     - Class: 114
-      Script: {instanceID: 2444}
+      Script: {instanceID: 2264}
     - Class: 114
-      Script: {instanceID: 2578}
+      Script: {instanceID: 2448}
     - Class: 114
-      Script: {instanceID: 2700}
+      Script: {instanceID: 2582}
     - Class: 114
-      Script: {instanceID: 2744}
+      Script: {instanceID: 2704}
     - Class: 114
-      Script: {instanceID: 2890}
+      Script: {instanceID: 2748}
     - Class: 114
-      Script: {instanceID: 3120}
+      Script: {instanceID: 2894}
     - Class: 114
-      Script: {instanceID: 3734}
+      Script: {instanceID: 3124}
     - Class: 114
-      Script: {instanceID: 4120}
+      Script: {instanceID: 3738}
     - Class: 114
-      Script: {instanceID: 4292}
+      Script: {instanceID: 4124}
     - Class: 114
-      Script: {instanceID: 5040}
+      Script: {instanceID: 4296}
     - Class: 114
-      Script: {instanceID: 5210}
+      Script: {instanceID: 5044}
     - Class: 114
-      Script: {instanceID: 80286}
+      Script: {instanceID: 5214}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -177,55 +179,55 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1566}
+      Script: {instanceID: 1568}
     - Class: 114
-      Script: {instanceID: 1616}
+      Script: {instanceID: 1618}
     - Class: 114
-      Script: {instanceID: 1886}
+      Script: {instanceID: 1888}
     - Class: 114
-      Script: {instanceID: 2224}
+      Script: {instanceID: 2226}
     - Class: 114
-      Script: {instanceID: 2444}
+      Script: {instanceID: 2264}
     - Class: 114
-      Script: {instanceID: 2578}
+      Script: {instanceID: 2448}
     - Class: 114
-      Script: {instanceID: 2744}
+      Script: {instanceID: 2582}
     - Class: 114
-      Script: {instanceID: 2798}
+      Script: {instanceID: 2748}
     - Class: 114
-      Script: {instanceID: 2890}
+      Script: {instanceID: 2802}
     - Class: 114
-      Script: {instanceID: 2926}
+      Script: {instanceID: 2894}
     - Class: 114
-      Script: {instanceID: 3254}
+      Script: {instanceID: 2930}
     - Class: 114
-      Script: {instanceID: 3470}
+      Script: {instanceID: 3258}
     - Class: 114
-      Script: {instanceID: 3734}
+      Script: {instanceID: 3474}
     - Class: 114
-      Script: {instanceID: 3776}
+      Script: {instanceID: 3738}
     - Class: 114
-      Script: {instanceID: 3922}
+      Script: {instanceID: 3780}
     - Class: 114
-      Script: {instanceID: 3964}
+      Script: {instanceID: 3926}
     - Class: 114
-      Script: {instanceID: 4168}
+      Script: {instanceID: 3968}
     - Class: 114
-      Script: {instanceID: 4292}
+      Script: {instanceID: 4172}
     - Class: 114
-      Script: {instanceID: 4316}
+      Script: {instanceID: 4296}
     - Class: 114
-      Script: {instanceID: 4396}
+      Script: {instanceID: 4320}
     - Class: 114
-      Script: {instanceID: 4960}
+      Script: {instanceID: 4400}
     - Class: 114
       Script: {instanceID: 4964}
     - Class: 114
-      Script: {instanceID: 5040}
+      Script: {instanceID: 4968}
     - Class: 114
-      Script: {instanceID: 5210}
+      Script: {instanceID: 5044}
     - Class: 114
-      Script: {instanceID: 80286}
+      Script: {instanceID: 5214}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -292,41 +294,41 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1886}
+      Script: {instanceID: 1888}
     - Class: 114
-      Script: {instanceID: 2212}
+      Script: {instanceID: 2214}
     - Class: 114
-      Script: {instanceID: 2224}
+      Script: {instanceID: 2226}
     - Class: 114
-      Script: {instanceID: 2444}
+      Script: {instanceID: 2264}
     - Class: 114
-      Script: {instanceID: 2578}
+      Script: {instanceID: 2448}
     - Class: 114
-      Script: {instanceID: 2700}
+      Script: {instanceID: 2582}
     - Class: 114
-      Script: {instanceID: 2744}
+      Script: {instanceID: 2704}
     - Class: 114
-      Script: {instanceID: 2890}
+      Script: {instanceID: 2748}
     - Class: 114
-      Script: {instanceID: 2936}
+      Script: {instanceID: 2894}
     - Class: 114
-      Script: {instanceID: 3120}
+      Script: {instanceID: 2940}
     - Class: 114
-      Script: {instanceID: 3734}
+      Script: {instanceID: 3124}
     - Class: 114
-      Script: {instanceID: 4292}
+      Script: {instanceID: 3738}
     - Class: 114
-      Script: {instanceID: 4316}
+      Script: {instanceID: 4296}
     - Class: 114
-      Script: {instanceID: 4444}
+      Script: {instanceID: 4320}
     - Class: 114
-      Script: {instanceID: 4750}
+      Script: {instanceID: 4448}
     - Class: 114
-      Script: {instanceID: 5040}
+      Script: {instanceID: 4754}
     - Class: 114
-      Script: {instanceID: 5210}
+      Script: {instanceID: 5044}
     - Class: 114
-      Script: {instanceID: 80286}
+      Script: {instanceID: 5214}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -472,6 +474,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: QuitGame
   - hash:
       serializedVersion: 2
       Hash: f1d735cc1a21c3704ab52568f4fbfcf8
@@ -1024,12 +1032,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
     className: AmbientOcclusion
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: QuitGame
   platform: 19
   scenePathNames:
   - Assets/Scenes/StartScene.unity

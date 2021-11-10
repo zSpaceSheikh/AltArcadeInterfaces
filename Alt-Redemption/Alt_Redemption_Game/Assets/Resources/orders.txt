@@ -1,4 +1,4 @@
-Plinko Burger:=Burger Patty+Bun+ ----------
+Test Order Plinko Burger:=Burger Patty+Bun+ ---------- +Say "Order Up" to send off the order
 Holy Guacamole 001:=Burger Patty+Bun+Lettuce+Onion+Avocado+ ----------
 Holy Gaucamole & Fry & Drink 002:=Burger Patty+Bun+Lettuce+Onion+Avocado+Fry+Drink+ ----------
 Plinko Burger N-Onion 003:=Burger Patty+Bun+Lettuce+Tomato+-Onion+Pickle+ ----------

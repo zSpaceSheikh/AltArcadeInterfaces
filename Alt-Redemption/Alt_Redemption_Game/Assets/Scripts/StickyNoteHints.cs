@@ -49,7 +49,7 @@ public class StickyNoteHints : MonoBehaviour
         sticky.SetActive(true);
         stickyText.text = "Say the name of an ingredient to the plinko machine to get started";
         
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(20f);
         
         sticky.SetActive(false);
         stickyText.text = "";
