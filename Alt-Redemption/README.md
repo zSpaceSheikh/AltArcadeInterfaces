@@ -1,6 +1,20 @@
 # Plinko Burger!
 
-***Plinko Burger is still in development but will involve digital burger making, via plinko!! With alternative controller squeezy bottles and an order headset***
+***Plinko Burger is a digital fast food plinko machine that players control using a drive thru headset and a set of condement squeezy bottles to *hopefully* serve food to their hungry customers***
+
+## Plinko Burger, A Game People Played!
+
+*"This looks insane"*
+
+On Sunday, November 14 2021, 100+ real people played Plinko Burger! At the 4th annual [Whaaat!? Festival](https://whaaat.io/) Pliko Burger set up shop, confusing and delighting many players at the festival. We laughed, cried when things almost didn't work, and celebrated many hilarious orders that players submitted. With a reigning high score of 174 points, the festival-goers took the silliness in stride and really gave Plinko Burger a chance to shine. 
+
+<img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/StartScreen.JPG" width="30%"> <img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/EndScreen.JPG" width="30.6%"> <img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/caddy-bottles.jpg" width="33%">
+
+<img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/PB-player1.jpeg" width="48%"> <img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/PB-player2.jpeg" width="48%">
+
+In all seriousness we learned a lot from the day, including that a few things could be reworked, like: our preliminary points system, the cue to know when an order is coming up due so you don't miss it, input/output audio where only the person playing can hear any of the fun sounds, and a number of small fixes like peas not actually giving you any points (whoops!). 
+
+But fear not! The fun doesn't stop here. We will be implenting some of these changes to make the game better as we prepare to submit Plinko Burger to GDC alt control! We will be working diligently (probably) to get the game up to snuff and finish preparing all of the materials and documentation of the game. Stay tuned for more Plinko Burger updates!
 
 ## Plinko Burger, Coming Soon!
 
