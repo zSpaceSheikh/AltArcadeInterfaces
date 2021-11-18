@@ -6,7 +6,7 @@ Documentation and code for projects developed in the Fall 2021 semester of ATLS 
 
 # Plinko Burger!
 
-***Plinko Burger is still in development but will feature alternative controller squeezy bottles and vocal commands to control a virtual, burger making plinko machine***
+***Plinko Burger is a digital fast food plinko machine that players control using a drive thru headset and a set of condement squeezy bottles to *hopefully* serve food to their hungry customers***
 
 <img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/PlinkoBurger-Glow.gif" width="75%">
 
