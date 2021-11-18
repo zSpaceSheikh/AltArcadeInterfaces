@@ -10,8 +10,11 @@ Documentation and code for projects developed in the Fall 2021 semester of ATLS 
 
 <img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/PlinkoBurger-Glow.gif" width="75%">
 
+[itch.io Game Page](https://z-sheikh.itch.io/plinko-burger)
+
 [Documentation](https://github.com/zSpaceSheikh/AltArcadeInterfaces/tree/main/Alt-Redemption)
 
+[Unity Project](https://github.com/zSpaceSheikh/AltArcadeInterfaces/tree/main/Alt-Redemption/Alt_Redemption_Game)
 
 
 # Bike Pong! 
