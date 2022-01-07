@@ -13,7 +13,7 @@ public class Timer : MonoBehaviour
     
     private float secPrev = 15f;
 
-    public float orderAddTime = 10f;
+    public float orderAddTime = 5f;
     public Light sceneLight;
 
     public TextMeshProUGUI countdownText;
@@ -68,7 +68,7 @@ public class Timer : MonoBehaviour
         
         
         // sound an alarm for the last 25 seconds
-        if (secs < 26 && mins == 0)
+        if (secs < 16 && mins == 0)
         {
             //Debug.Log("secs: " + secs + "  secPrev: " + secPrev);
             if (secPrev - secs == 1)

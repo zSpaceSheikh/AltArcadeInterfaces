@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7260006089376555397}
   m_Layer: 0
   m_Name: Pea-Single
-  m_TagString: Ingredient
+  m_TagString: Pea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

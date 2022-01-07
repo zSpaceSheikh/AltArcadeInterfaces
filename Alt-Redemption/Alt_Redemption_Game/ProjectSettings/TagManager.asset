@@ -17,9 +17,22 @@ TagManager:
   - Mushroom
   - Drink
   - Fry
-  - Compost
-  - Recycle
-  - Trash
+  - Pickle
+  - Avocado
+  - Squash
+  - Pineapple
+  - Ham
+  - Coconut
+  - Banana
+  - Apple
+  - Fried Egg
+  - Donut
+  - Pea
+  - Beet
+  - Broccoli
+  - Strawberry
+  - Watermelon
+  - Papaya
   layers:
   - Default
   - TransparentFX

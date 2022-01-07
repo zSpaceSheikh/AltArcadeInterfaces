@@ -33,7 +33,7 @@ public class Score : MonoBehaviour
             numOrders++;
 
             // add a little time if they submitted an order with stuff in it
-            if (_collectedIngredients.Count > 0)
+            if (_collectedIngredients.Count > 1)
             {
                 Timer.S.AddTime();
             }

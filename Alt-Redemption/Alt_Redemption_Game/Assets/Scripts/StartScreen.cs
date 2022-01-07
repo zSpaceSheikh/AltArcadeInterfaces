@@ -8,6 +8,9 @@ using UnityEngine.SceneManagement;
 
 public class StartScreen : MonoBehaviour
 {
+    public GameObject lights1;
+    public GameObject lights2;
+    private bool swapScene;
     
     private KeywordRecognizer keywordRecognizer;
     private Dictionary<string, Action> actions = new Dictionary<string, Action>();
@@ -16,6 +19,10 @@ public class StartScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // set the bool check for the lights
+        swapScene = false;
+        
+        // add the start key words
         actions.Add("Welcome to plinko burger, home of the plinko burger, can I take your order?", GameStart);
         actions.Add("game start", GameStart);
         
@@ -26,7 +33,15 @@ public class StartScreen : MonoBehaviour
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray(), ConfidenceLevel.Low);
         keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
         keywordRecognizer.Start();
+        
+        // set the lights 
+        lights1.SetActive(true);
+        lights2.SetActive(true);
+        
+        // activate the blinking lights coroutine
+        StartCoroutine(BlinkLights());
     }
+
 
     private void GameStart()
     {
@@ -37,7 +52,36 @@ public class StartScreen : MonoBehaviour
     
     private void RecognizedSpeech(PhraseRecognizedEventArgs Speech)
     {
-        //Debug.Log(Speech.text);
+        swapScene = true;
+        Debug.Log(Speech.text);
         actions[Speech.text].Invoke();
     }
+
+
+    IEnumerator BlinkLights()
+    {
+        //Debug.Log("Entered BlinkLights()");
+        
+        // swap the lights
+        lights1.SetActive(false);
+        lights2.SetActive(true);
+        
+        // wait a bit
+        yield return new WaitForSeconds(1.5f);
+        
+        // swap the lights back
+        lights1.SetActive(true);
+        lights2.SetActive(false);
+        
+        // wait a bit
+        yield return new WaitForSeconds(1.5f);
+
+        if (!swapScene)
+        {
+            //Debug.Log("Re-entering BlinkLights()");
+            StartCoroutine(BlinkLights());
+        }
+        //Debug.Log("Exiting BlinkLights()");
+    }
+    
 }

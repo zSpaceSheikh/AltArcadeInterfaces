@@ -103,11 +103,16 @@ public class Orders : MonoBehaviour
 
             //move the receipt
             StartCoroutine(MoveReceipt());
+            
+            // reset the order up text
+            orderBinText.text = "";
         }
         else
         {
             // maybe check for new ingredients to check off from the list?
         }
+        
+        
         
         
         if (timeLeft > 0)
