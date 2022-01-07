@@ -1,10 +1,21 @@
 # Plinko Burger!
 
-***Plinko Burger is a digital fast food plinko machine that players control using a drive thru headset and a set of condement squeezy bottles to *hopefully* serve food to their hungry customers***
+***Plinko Burger is a digital fast food plinko machine that players control using a drive thru headset and a set of condiment squeezy bottles to *hopefully* serve food to their hungry customers***
+
+## Plinko Burger, A Game People Might Continue to Play!?
+
+ - *It's not over yet!*
+
+Plinko Burger has been given another life (suprises incoming soon!) and as such, it will be getting some new updates! (*distant cheering and sobbing)* 
+
+The first major update has been to revamp the start screen to both feel more cool, and also set the scene a little better for the game. 
+
+<img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/PB-NewStartScreen.gif" width="80%">
+
 
 ## Plinko Burger, A Game People Played!
 
-*"This looks insane"*
+- *"This looks insane"*
 
 On Sunday, November 14 2021, 100+ real people played Plinko Burger! At the 4th annual [Whaaat!? Festival](https://whaaat.io/) Pliko Burger set up shop, confusing and delighting many players at the festival. We laughed, cried when things almost didn't work, and celebrated many hilarious orders that players submitted. With a reigning high score of 174 points, the festival-goers took the silliness in stride and really gave Plinko Burger a chance to shine. 
 
@@ -18,7 +29,7 @@ But fear not! The fun doesn't stop here. We will be implenting some of these cha
 
 ## Plinko Burger, Coming Soon!
 
-*Is that a fire!?*
+- *Is that a fire!?*
 
 Somehow this update both makes things simpler, and adds more complexity and options for interactions! The whole serving bins situation got overhauled so that the orders go through faster and with less issues. Each individual order now has a timer and an accompanying unique audio clip of someone ordering. With 30+ orders! Sticky notes will appear on the receipt printer with tips, including if the player hasn't spoken anything to the plinko machine. Also, different words will now trigger the plinko machine to shake, catch on fire, spit out confetti and more! A number of other small updates and optimizations have been made to the backend of how the game is running, but those are pretty boring so I will just let you guess what that even means and move on lol. Below is a short gif of some of the events that can be initiated by different words like "what" "oh my god" "shit" and "sorry" in the machine. 
 
@@ -27,7 +38,7 @@ Somehow this update both makes things simpler, and adds more complexity and opti
 
 ## Welcome to Plinko Burger!
 
-*Would you like your receipt?*
+- *Would you like your receipt?*
 
 This next iteration of Plinko Burger mainly involved some aesthetic upgrades and an opperational ordering system. We decided to go back to a single, central order bin after figuring out that two bins was two times, too many. Players can also see the missed ingredients fall to their deaths through transparent shoots out the back. The entire plinko machine got a *glow* update which gives a nice cool diner vibe to the whole experience.
 
@@ -39,7 +50,7 @@ I wish we had the time and resources to hook up and *actual* receipt printer to 
 
 ## Plinko Burger, Order Up
 
-*Bins, buns, battlestar galactica!*
+- *Bins, buns, battlestar galactica!*
 
 Lots of functional updates *distant cheering* including moving order bins, propulsion ketchup/mustard controls, and a mystery box full of random ingredients!? The prototype will also now be controlled with a pair of force sensitive resistor squeezy bottle which will propel the bumper in either direction. The actual motion of the bumper could definitely be more slippery, which should happen in the next update. 
 
@@ -50,7 +61,7 @@ The mystery box is full of random food items which will fall at on command, incl
 
 ## A Plinko Burger Prototype!
 
-*Welcome to Plinko Burger, home of the plinko burger, may I take your order?*
+- *Welcome to Plinko Burger, home of the plinko burger, may I take your order?*
 
 The newest plinko prototype has some super snazzy updates! Now with voice controls for ordering each ingredient to fall from their respective bins at the top, players can call out what they need and attempt to build thier burger. The bins at the top also light up and ding when the machine recognizes the players request. Pressing the spacebar sends the order off through the bin at the bottom and so you can start on the next one. 
 
@@ -62,7 +73,7 @@ Our next task will be to have specific orders, scoring, and a physical spatula c
 
 ## Burger Plinko (*nomnomnom*)
 
-*Is that a burger???*
+- *Is that a burger???*
 
 Moving forward with this prototype, we wanted to try out some basic interactivity on the unity side and reskin the idea. 
 
