@@ -19,7 +19,7 @@ The first major update has been to revamp the start screen to both feel more coo
 
 On Sunday, November 14 2021, 100+ real people played Plinko Burger! At the 4th annual [Whaaat!? Festival](https://whaaat.io/) Pliko Burger set up shop, confusing and delighting many players at the festival. We laughed, cried when things almost didn't work, and celebrated many hilarious orders that players submitted. With a reigning high score of 174 points, the festival-goers took the silliness in stride and really gave Plinko Burger a chance to shine. 
 
-<img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/StartScreen.JPG" width="33%"> <img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/EndScreen.JPG" width="34%"> <img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/PB-Caddy01.JPG" width="30%">
+<img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/StartScreen.JPG" width="30%"> <img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/EndScreen.JPG" width="30.6%"> <img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/caddy-bottles.jpg" width="33%">
 
 <img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/PB-player1.jpeg" width="48%"> <img src="https://github.com/zSpaceSheikh/AltArcadeInterfaces/blob/main/Alt-Redemption/Alt_Redemption_Media/PB-player2.jpeg" width="48%">
 
